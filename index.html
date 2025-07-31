@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Smith - Mechanical Engineer</title>
+    <!-- Use TailwindCSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Fade-in effect for sections */
+        .section-fade {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-in-out;
+        }
+        .section-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Simple hover animation for nav links */
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-slate-900/90 backdrop-blur-sm z-50 border-b border-blue-500/20">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-blue-400">John Smith</h1>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link text-gray-300 hover:text-blue-400">About</a>
+                    <a href="#education" class="nav-link text-gray-300 hover:text-blue-400">Education</a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-blue-400">Projects</a>
+                    <a href="#experience" class="nav-link text-gray-300 hover:text-blue-400">Experience</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-blue-400">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="#about" class="block py-2 text-gray-300 hover:text-blue-400">About</a>
+                <a href="#education" class="block py-2 text-gray-300 hover:text-blue-400">Education</a>
+                <a href="#projects" class="block py-2 text-gray-300 hover:text-blue-400">Projects</a>
+                <a href="#experience" class="block py-2 text-gray-300 hover:text-blue-400">Experience</a>
+                <a href="#contact" class="block py-2 text-gray-300 hover:text-blue-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-20">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="mb-8">
+                <div class="w-48 h-48 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-6xl font-bold shadow-2xl">
+                    JS
+                </div>
+                <p class="text-sm text-blue-300 mb-2">Click to replace with your photo</p>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                John Smith
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8">Mechanical Engineer</p>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-12">
+                Passionate about designing innovative solutions and optimizing mechanical systems for a sustainable future.
+            </p>
+            <a href="#about" class="inline-block bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Explore My Work
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 section-fade">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-400">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="w-full h-96 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg flex items-center justify-center mb-4 shadow-xl">
+                        <div class="text-center">
+                            <!-- Placeholder for photo icon -->
+                            <svg class="w-16 h-16 mx-auto mb-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
+                            </svg>
+                            <p class="text-gray-400">Your Professional Photo Here</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        I'm a dedicated mechanical engineer with a passion for innovation and problem-solving. With expertise in CAD design, thermodynamics, and manufacturing processes, I strive to create efficient and sustainable engineering solutions.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        My experience spans across automotive, aerospace, and renewable energy sectors, where I've contributed to projects ranging from engine optimization to sustainable energy systems.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-blue-500/20">
+                            <h4 class="font-semibold text-blue-400 mb-2">Specializations</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• CAD Design (SolidWorks, AutoCAD)</li>
+                                <li>• Finite Element Analysis</li>
+                                <li>• Thermodynamics</li>
+                                <li>• Manufacturing Processes</li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-blue-500/20">
+                            <h4 class="font-semibold text-blue-400 mb-2">Interests</h4>
+                            <ul class="text-sm text-gray-300 space-y-1">
+                                <li>• Renewable Energy</li>
+                                <li>• Robotics & Automation</li>
+                                <li>• Sustainable Design</li>
+                                <li>• 3D Printing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-slate-800/30 section-fade">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-400">Education</h2>
+            <div class="space-y-8">
+                <!-- Master's Degree -->
+                <div class="bg-slate-800/50 p-8 rounded-lg border border-blue-500/20 shadow-xl">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-white">Master of Science in Mechanical Engineering</h3>
+                        <span class="text-blue-400 font-semibold">2020 - 2022</span>
+                    </div>
+                    <p class="text-xl text-gray-300 mb-2">Stanford University</p>
+                    <p class="text-gray-400 mb-4">Specialization: Advanced Manufacturing and Design</p>
+                    <p class="text-gray-300">GPA: 3.8/4.0 | Thesis: "Optimization of Additive Manufacturing Processes for Aerospace Applications"</p>
+                </div>
+                <!-- Bachelor's Degree -->
+                <div class="bg-slate-800/50 p-8 rounded-lg border border-blue-500/20 shadow-xl">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-white">Bachelor of Science in Mechanical Engineering</h3>
+                        <span class="text-blue-400 font-semibold">2016 - 2020</span>
+                    </div>
+                    <p class="text-xl text-gray-300 mb-2">University of California, Berkeley</p>
+                    <p class="text-gray-400 mb-4">Magna Cum Laude</p>
+                    <p class="text-gray-300">GPA: 3.7/4.0 | Senior Project: "Design and Prototyping of Energy-Efficient HVAC System"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 section-fade">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-400">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-slate-800/50 rounded-lg overflow-hidden border border-blue-500/20 shadow-xl hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
+                        <div class="text-center">
+                            <!-- Icon placeholder -->
+                            <svg class="w-12 h-12 mx-auto mb-2 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                            </svg>
+                            <p class="text-white text-sm">Project Image</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Autonomous Drone Design</h3>
+                        <p class="text-gray-300 mb-4">Designed and built an autonomous drone for environmental monitoring with advanced sensor integration and flight optimization.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-sm">CAD Design</span>
+                            <span class="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-sm">Aerodynamics</span>
+                            <span class="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-sm">Control Systems</span>
+                        </div>
+                        <button class="text-blue-400 hover:text-blue-300 font-semibold project-details-btn">View Details →</button>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-slate-800/50 rounded-lg overflow-hidden border border-blue-500/20 shadow-xl hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-green-600 to-blue-600 flex items-center justify-center">
+                        <div class="text-center">
+                            <svg class="w-12 h-12 mx-auto mb-2 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                            </svg>
+                            <p class="text-white text-sm">Project Image</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Solar Panel Tracking System</h3>
+                        <p class="text-gray-300 mb-4">Developed an automated solar panel tracking system that increases energy efficiency by 35% through optimal sun positioning.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-green-600/20 text-green-300 rounded-full text-sm">Renewable Energy</span>
+                            <span class="px-3 py-1 bg-green-600/20 text-green-300 rounded-full text-sm">Automation</span>
+                            <span class="px-3 py-1 bg-green-600/20 text-green-300 rounded-full text-sm">Sensors</span>
+                        </div>
+                        <button class="text-blue-400 hover:text-blue-300 font-semibold project-details-btn">View Details →</button>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-slate-800/50 rounded-lg overflow-hidden border border-blue-500/20 shadow-xl hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
+                        <div class="text-center">
+                            <svg class="w-12 h-12 mx-auto mb-2 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path>
+                            </svg>
+                            <p class="text-white text-sm">Project Image</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Heat Exchanger Optimization</h3>
+                        <p class="text-gray-300 mb-4">Redesigned industrial heat exchanger systems resulting in 25% improved thermal efficiency and reduced manufacturing costs.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm">Thermodynamics</span>
+                            <span class="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm">CFD Analysis</span>
+                            <span class="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm">Optimization</span>
+                        </div>
+                        <button class="text-blue-400 hover:text-blue-300 font-semibold project-details-btn">View Details →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-slate-800/30 section-fade">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-400">Professional Experience</h2>
+            <div class="space-y-8">
+                <!-- Tesla -->
+                <div class="bg-slate-800/50 p-8 rounded-lg border border-blue-500/20 shadow-xl">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Senior Mechanical Engineer</h3>
+                            <p class="text-xl text-blue-400 mb-2">Tesla Inc.</p>
+                        </div>
+                        <span class="text-gray-400 font-semibold">2022 - Present</span>
+                    </div>
+                    <ul class="text-gray-300 space-y-2 mb-4">
+                        <li>• Led design and optimization of battery cooling systems for Model S and Model X vehicles</li>
+                        <li>• Collaborated with cross-functional teams to improve manufacturing efficiency by 20%</li>
+                        <li>• Implemented advanced CAD workflows reducing design iteration time by 30%</li>
+                        <li>• Mentored junior engineers and conducted technical design reviews</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-sm">SolidWorks</span>
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-sm">Thermal Management</span>
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-sm">Project Leadership</span>
+                    </div>
+                </div>
+                <!-- Boeing -->
+                <div class="bg-slate-800/50 p-8 rounded-lg border border-blue-500/20 shadow-xl">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Mechanical Engineer</h3>
+                            <p class="text-xl text-blue-400 mb-2">Boeing</p>
+                        </div>
+                        <span class="text-gray-400 font-semibold">2020 - 2022</span>
+                    </div>
+                    <ul class="text-gray-300 space-y-2 mb-4">
+                        <li>• Designed aircraft component assemblies for 737 MAX program</li>
+                        <li>• Performed structural analysis and fatigue testing on critical flight components</li>
+                        <li>• Collaborated with suppliers to optimize manufacturing processes and reduce costs</li>
+                        <li>• Ensured compliance with FAA regulations and aerospace quality standards</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-600/20 text-green-300 rounded-full text-sm">CATIA</span>
+                        <span class="px-3 py-1 bg-green-600/20 text-green-300 rounded-full text-sm">FEA</span>
+                        <span class="px-3 py-1 bg-green-600/20 text-green-300 rounded-full text-sm">Aerospace Standards</span>
+                    </div>
+                </div>
+                <!-- GE -->
+                <div class="bg-slate-800/50 p-8 rounded-lg border border-blue-500/20 shadow-xl">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Engineering Intern</h3>
+                            <p class="text-xl text-blue-400 mb-2">General Electric</p>
+                        </div>
+                        <span class="text-gray-400 font-semibold">Summer 2019</span>
+                    </div>
+                    <ul class="text-gray-300 space-y-2 mb-4">
+                        <li>• Assisted in turbine blade design optimization for jet engines</li>
+                        <li>• Conducted material testing and analysis for high-temperature applications</li>
+                        <li>• Created technical documentation and presented findings to engineering teams</li>
+                        <li>• Gained hands-on experience with advanced manufacturing techniques</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm">Materials Science</span>
+                        <span class="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm">Testing</span>
+                        <span class="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm">Documentation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 section-fade">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-400">Get In Touch</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact details -->
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Let's Connect</h3>
+                    <p class="text-gray-300 mb-8 leading-relaxed">
+                        I'm always interested in discussing new opportunities, innovative projects, or collaborations in mechanical engineering. Feel free to reach out!
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-semibold">Email</p>
+                                <p class="text-gray-300">john.smith@email.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-semibold">Location</p>
+                                <p class="text-gray-300">San Francisco, CA</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-semibold">LinkedIn</p>
+                                <p class="text-gray-300">linkedin.com/in/johnsmith</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact form -->
+                <div>
+                    <form class="space-y-6" onsubmit="handleSubmit(event)">
+                        <div>
+                            <label class="block text-white font-semibold mb-2">Name</label>
+                            <input type="text" required class="w-full px-4 py-3 bg-slate-800/50 border border-blue-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-white font-semibold mb-2">Email</label>
+                            <input type="email" required class="w-full px-4 py-3 bg-slate-800/50 border border-blue-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-white font-semibold mb-2">Subject</label>
+                            <input type="text" required class="w-full px-4 py-3 bg-slate-800/50 border border-blue-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-white font-semibold mb-2">Message</label>
+                            <textarea rows="5" required class="w-full px-4 py-3 bg-slate-800/50 border border-blue-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg text-white font-semibold transition-colors duration-300 transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </form>
+                    <div class="mt-4 p-4 bg-yellow-600/20 border border-yellow-500/20 rounded-lg">
+                        <p class="text-yellow-300 text-sm">
+                            <strong>Demo Form:</strong> This contact form is for demonstration purposes. In a real website, you would need backend functionality to process form submissions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-8 border-t border-blue-500/20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2024 John Smith. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript functionality for smooth scrolling, animations, and form handling -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        // Intersection Observer for fade-in animations
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.section-fade').forEach(section => {
+            observer.observe(section);
+        });
+        // Contact form handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your message! This is a demo form. In a real website, this would send your message to the website owner.');
+            event.target.reset();
+        }
+        // Handle project detail buttons
+        document.querySelectorAll('.project-details-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Project details would be displayed here. You can customize this to show more information, images, or link to detailed project pages.');
+            });
+        });
+    </script>
+</body>
+</html>
