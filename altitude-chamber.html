@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altitude Chamber - John Lear Portfolio</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Simple hover animation for nav links */
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-slate-900/90 backdrop-blur-sm z-50 border-b border-blue-500/20">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-blue-400">John Lear</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#about" class="nav-link text-gray-300 hover:text-blue-400">About</a>
+                    <a href="index.html#education" class="nav-link text-gray-300 hover:text-blue-400">Education</a>
+                    <a href="index.html#projects" class="nav-link text-gray-300 hover:text-blue-400">Projects</a>
+                    <a href="index.html#experience" class="nav-link text-gray-300 hover:text-blue-400">Experience</a>
+                    <a href="index.html#contact" class="nav-link text-gray-300 hover:text-blue-400">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-20 max-w-6xl mx-auto px-6">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Altitude Chamber</h1>
+        <p class="text-lg text-gray-300 mb-6">
+            As the lead design engineer, I designed and fabricated a testing environment capable of simulating altitudes from sea level to 5,000&nbsp;meters. The system features a LabVIEW user interface and an Arduino Uno to adjust chamber pressure based on a single user-supplied input, allowing accurate cross-referencing of altimeter readings.
+        </p>
+        <h2 class="text-2xl font-bold text-blue-400 mb-4">Highlights</h2>
+        <ul class="list-disc pl-6 text-gray-300 space-y-2">
+            <li>Served as lead design engineer</li>
+            <li>Designed and fabricated a testing environment simulating altitudes from sea level to 5,000&nbsp;meters</li>
+            <li>Integrated a LabVIEW UI and Arduino Uno to control chamber pressure and cross-reference altimeter readings</li>
+        </ul>
+        
+        <!-- Documents Section -->
+        <h2 class="text-2xl font-bold text-blue-400 mt-10 mb-4">Supporting Documents</h2>
+        <p class="text-gray-400 mb-6">Project documents will be added here once available.</p>
+
+        <!-- Project Gallery Section -->
+        <h2 class="text-2xl font-bold text-blue-400 mt-10 mb-4">Project Gallery</h2>
+        <p class="text-gray-400 mb-6">Project images will be added here once available.</p>
+        
+        <div class="mt-8">
+            <a href="index.html#projects" class="text-blue-400 hover:text-blue-300 font-semibold">← Back to Projects</a>
+        </div>
+    </main>
+</body>
+</html>
