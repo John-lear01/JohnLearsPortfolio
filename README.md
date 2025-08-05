@@ -1,10 +1,10 @@
 # John Lear Portfolio
 
-This repository contains the source files for **John Lear's engineering portfolio** website hosted on GitHub Pages.  The site is a single‑page application built with plain HTML and [Tailwind CSS](https://tailwindcss.com/) that showcases John's education, featured projects, professional experience, and contact information.
+This repository contains the source files for **John Lear's engineering portfolio** website hosted on GitHub Pages.  The site is a single‑page application built with plain HTML and [Tailwind CSS](https://tailwindcss.com/) that showcases my education, featured projects, professional experience, and contact information.
 
 ## Structure
 
-- **index.html** – the main landing page for the portfolio.  It includes a hero section, about and education sections, a featured projects grid, professional experience, and a “Get in Touch” contact form.
+- **index.html** – the main landing page for the portfolio.  It includes a hero section, about, an education sections, a featured projects grid, professional experience, and a “Get in Touch” contact form.
 - **portfolio.html** – an alternate entry point containing the same content as `index.html` but separated for convenience.
 - **vertical-axis-wind-turbine.html**, **altitude-chamber.html**, **heating-load-calculation.html** – dedicated pages for each featured project.  Each page describes the project, lists highlights, provides supporting documents, and contains an image gallery.
 - **images/** – contains all of the photographs and rendered images used throughout the site.  Keeping images in their own folder helps keep the repository tidy and makes it easy to update paths in the HTML.
